@@ -1,4 +1,4 @@
-# ![Icon](./datapack/pack.png) TTU Custom Server Resources
+# ![Icon](./icons/new_ttu_server_logo.gif) TTU Custom Server Resources
 
 > Current Mineraft Version: 26.2
 
