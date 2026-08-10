@@ -30,7 +30,7 @@ The players are not generated automatically. They are manually added to the data
 
 ### WorldUtils
 
-This doesn't add spawn protection, but it notifies players when they leave the spawn area in case your server has rules about griefing or PvP in the spawn area.
+This doesn't add spawn protection, but it notifies players when they leave the spawn area in case your server has rules about griefing or PvP in the spawn area. It also allows you to have a tp to spawn and a suicide command for players to use.
 
 `/function worldutils:config`: Shows a custom dialog menu for configuring the spawn radius settings.
 
