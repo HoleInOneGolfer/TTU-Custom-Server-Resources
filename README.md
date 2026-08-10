@@ -44,6 +44,10 @@ This doesn't add spawn protection, but it notifies players when they leave the s
 | `/trigger spawn_tp`                                                        | Teleports the player to the spawn point.                              |
 | `/trigger suicide`                                                         | Kills the player.                                                     |
 
+### Hopper
+
+Changes the hopper recipe to not include a chest. This is to make it easier to craft hoppers without having to use a chest.
+
 ## Resource Pack
 
 Nothing has been added to the resource pack yet, so it is not required yet.
@@ -76,3 +80,4 @@ To publish a new release:
 ## Credits
 
 - [BenGamer427](https://github.com/HoleInOneGolfer)
+- [TyBoMC]()
