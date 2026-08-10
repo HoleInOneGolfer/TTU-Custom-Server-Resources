@@ -4,6 +4,7 @@
         "mannequins:load",
         "discswapper:load",
         "worldutils:load",
-        "hopper:load"
+        "hopper:load",
+        "dye:load"
     ]
 }

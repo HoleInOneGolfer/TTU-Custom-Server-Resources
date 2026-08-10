@@ -50,6 +50,10 @@ This doesn't add spawn protection, but it notifies players when they leave the s
 
 Changes the hopper recipe to not include a chest. This is to make it easier to craft hoppers without having to use a chest.
 
+#### Dye
+
+Adds a brown dye recipe that uses blue, yellow, and red dyes. Also adds a green dye recipe from blue and yellow dyes. This is to make it easier to craft dyes without having to use a cocoa bean or cactus.
+
 ### Resource Pack
 
 Nothing has been added to the resource pack yet, so it is not required yet.
