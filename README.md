@@ -48,7 +48,7 @@ This doesn't add spawn protection, but it notifies players when they leave the s
 
 #### Hopper
 
-Changes the hopper recipe to not include a chest. This is to make it easier to craft hoppers without having to use a chest.
+Adds an alternate recipe for hoppers to not include a chest. This is to make it easier to craft hoppers without having to use a chest.
 
 #### Dye
 
