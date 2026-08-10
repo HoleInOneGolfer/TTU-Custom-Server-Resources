@@ -2,7 +2,7 @@
 
 > Created by BenGamer427
 
-This is a custom datapack for the TTU server. It includes various features and enhancements to improve gameplay and provide a unique experience for players.
+These are the custom resources for the TTU server. It includes various features and enhancements to improve gameplay and provide a unique experience for players as well as the textures to help support it.
 
 ## Datapack
 
