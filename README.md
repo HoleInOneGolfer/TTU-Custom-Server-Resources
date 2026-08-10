@@ -54,12 +54,11 @@ If you are interested in contributing to the development of these custom resourc
 
 To setup your environment for development, you will need to do the following:
 
-1. Fork the repository on GitHub to your own account.
-2. Clone the repository to your local machine using the command: `git clone <repository_url>`
-3. Create 2 Symlinks
+1. Clone the repository to your local machine using the command: `git clone <repository_url>`
+2. Create 2 Symlinks
    1. Create a symlink from the `datapack` folder to your Minecraft `saves/<world_name>/datapacks` folder.
    2. Create a symlink from the `resourcepack` folder to your Minecraft `resourcepacks` folder.
-4. Enable Symlinks in your Minecraft instance
+3. Enable Symlinks in your Minecraft instance
    1. In you `.minecraft` folder, create a file called `allowed_symlinks.txt` and add the paths to the `datapack` and `resourcepack` folders in the repository.
 
 To push a new release of the repository, you will need to do the following:
