@@ -1,0 +1,8 @@
+{
+    "values": [
+        "ttuserver:load",
+        "mannequins:load",
+        "discswapper:load",
+        "spawnradius:load"
+    ]
+}
