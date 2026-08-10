@@ -86,4 +86,4 @@ To publish a new release:
 ## Credits
 
 - [BenGamer427](https://github.com/HoleInOneGolfer)
-- [TyBoMC]()
+- [TyBoMC](https://namemc.com/profile/TyBoMC.1)
