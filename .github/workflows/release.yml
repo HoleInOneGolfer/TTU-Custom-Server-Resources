@@ -8,7 +8,7 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-    
+
     permissions:
       contents: write
 
@@ -16,31 +16,42 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # 1. Zip datapack folder with custom naming
-      - name: Zip Datapack
+      - name: Build Zips
         run: |
           TAG_NAME="${{ github.ref_name }}"
+
+          # Define exact filenames using the tag
+          DATAPACK_FILE="ttu_server_${TAG_NAME}_datapack.zip"
+          RESOURCE_FILE="ttu_server_${TAG_NAME}_resourcepack.zip"
+
+          # Zip datapack
           cd datapack
-          zip -r "../ttu_server_${TAG_NAME}_v*.zip" .
+          zip -r "../$DATAPACK_FILE" .
+          cd ..
 
-      # 2. Zip resourcepack folder with custom naming
-      - name: Zip Resourcepack
-        run: |
-          TAG_NAME="${{ github.ref_name }}"
+          # Zip resourcepack
           cd resourcepack
-          zip -r "../ttu_server_${TAG_NAME}_v*.zip" .
+          zip -r "../$RESOURCE_FILE" .
+          cd ..
 
-      # Upload internal workflow pipeline artifacts
+          # Save filenames to GitHub environment so subsequent steps can use them
+          echo "DATAPACK_FILE=$DATAPACK_FILE" >> $GITHUB_ENV
+          echo "RESOURCE_FILE=$RESOURCE_FILE" >> $GITHUB_ENV
+
+      # 1 & 2. Upload internal workflow pipeline artifacts explicitly
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: server-packs
-          path: ttu_server_*_v*.zip
+          path: |
+            ${{ env.DATAPACK_FILE }}
+            ${{ env.RESOURCE_FILE }}
 
-      # 3. Create release, auto-generate changelog, and attach the custom zips
+      # 3. Create release, auto-generate changelog, and attach the exact zips
       - name: Create GitHub Release and Upload Assets
         uses: softprops/action-gh-release@v3
         with:
           files: |
-            ttu_server_*_v*.zip
+            ${{ env.DATAPACK_FILE }}
+            ${{ env.RESOURCE_FILE }}
           generate_release_notes: true
