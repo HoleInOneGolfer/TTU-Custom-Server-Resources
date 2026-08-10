@@ -67,6 +67,11 @@ To push a new release of the repository, you will need to do the following:
 1. Run `git tag v<version_number>` to create a new tag for the release.
 2. Run `git push origin v<version_number>` to push the tag to the remote repository.
 
+## Help?
+
+- [Datapack Wiki Page](https://minecraft.wiki/w/Data_pack)
+- [Resource Pack Wiki Page](https://minecraft.wiki/w/Resource_pack)
+
 ## Credits
 
 - [BenGamer427](https://github.com/HoleInOneGolfer)
