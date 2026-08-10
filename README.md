@@ -4,11 +4,13 @@
 
 These are the custom resources for the TTU server. It includes various features and enhancements to improve gameplay and provide a unique experience for players as well as the textures to help support it.
 
-## Datapack
+## Features
+
+### Datapack
 
 The pack is made up of several modules, each providing different functionalities. Below is a list of the available modules and the information about them.
 
-### DiscSwapper
+#### DiscSwapper
 
 This module is specifically designed to pair with the audioplayer mod by letting the player use any disc model the want for their custom music discs.
 
@@ -18,7 +20,7 @@ This module is specifically designed to pair with the audioplayer mod by letting
 | `/function discswapper:menu_alt` or `/trigger discmenu set 2` | Shows an alternative text-based menu for swapping music discs. |
 | `/trigger discmodel set <number>`                             | Changes the model of the music disc to the specified number.   |
 
-### Mannequin
+#### Mannequin
 
 The players are not generated automatically. They are manually added to the datapack. For new players you have to change a bunch of stuff. These are also not real players, they are just mannequins that look like players. The mannequins are spawned on bats that are named after the players. When they first spawn in, they look at the nearest player and the bat is killed.
 
@@ -29,7 +31,7 @@ The players are not generated automatically. They are manually added to the data
 | `/function mannequin:spawn_players_arranged` | Spawns all the players arranged like they are on stairs. |
 | `/function mannequin:spawn_players`          | Spawns all players and spreads them out randomly.        |
 
-### WorldUtils
+#### WorldUtils
 
 This doesn't add spawn protection, but it notifies players when they leave the spawn area in case your server has rules about griefing or PvP in the spawn area. It also allows you to have a tp to spawn and a suicide command for players to use.
 
@@ -44,11 +46,11 @@ This doesn't add spawn protection, but it notifies players when they leave the s
 | `/trigger spawn_tp`                                                        | Teleports the player to the spawn point.                              |
 | `/trigger suicide`                                                         | Kills the player.                                                     |
 
-### Hopper
+#### Hopper
 
 Changes the hopper recipe to not include a chest. This is to make it easier to craft hoppers without having to use a chest.
 
-## Resource Pack
+### Resource Pack
 
 Nothing has been added to the resource pack yet, so it is not required yet.
 
