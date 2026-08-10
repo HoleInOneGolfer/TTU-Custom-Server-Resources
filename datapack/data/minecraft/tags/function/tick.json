@@ -3,6 +3,6 @@
         "ttuserver:tick",
         "mannequins:tick",
         "discswapper:tick",
-        "spawnradius:tick"
+        "worldutils:tick"
     ]
 }

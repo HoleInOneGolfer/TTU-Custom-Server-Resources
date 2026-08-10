@@ -1,0 +1,61 @@
+{
+    "type": "minecraft:multi_action",
+    "title": {
+        "text": "WorldUtils Config",
+        "type": "text",
+        "color": "green",
+        "bold": true,
+        "underlined": true
+    },
+    "body": [
+        {
+            "type": "minecraft:plain_message",
+            "contents": {
+                "text": "This datapack manages a dynamic spawn region around the world spawn. When players enter or leave the spawn region, they are informed with a title on their screen.",
+                "type": "text",
+                "italic": true
+            }
+        },
+        {
+            "type": "minecraft:plain_message",
+            "contents": {
+                "text": "Note: The initial values shown here are not the real values until saved. The confirm button updates both values in the config.",
+                "italic": true
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "type": "minecraft:number_range",
+            "key": "radius",
+            "label": "Radius",
+            "start": 0,
+            "end": 1024,
+            "step": 64
+        },
+        {
+            "type": "minecraft:single_option",
+            "key": "shape",
+            "label": "Shape",
+            "options": [
+                {
+                    "id": "square",
+                    "display": "Square"
+                },
+                {
+                    "id": "sphere",
+                    "display": "Sphere"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "label": "Confirm",
+            "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/function worldutils:set_config {shape: $(shape), radius: $(radius)}"
+            }
+        }
+    ]
+}

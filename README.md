@@ -28,21 +28,21 @@ The players are not generated automatically. They are manually added to the data
 
 `/function mannequin:spawn_players`: Spawns all players and spreads them out randomly
 
-### SpawnRadius
+### WorldUtils
 
 This doesn't add spawn protection, but it notifies players when they leave the spawn area in case your server has rules about griefing or PvP in the spawn area.
 
-`/function spawnradius:config`: Shows a custom dialog menu for configuring the spawn radius settings.
+`/function worldutils:config`: Shows a custom dialog menu for configuring the spawn radius settings.
 
-`/function spawnradius:set_spawn`: Sets the spawn to the current location of the player.
+`/function worldutils:set_spawn`: Sets the spawn to the current location of the player.
 
-`/function spawnradius:set_radius {radius:<number>}`: Sets the spawn radius to the specified number.
+`/function worldutils:set_radius {radius:<number>}`: Sets the spawn radius to the specified number.
 
-`/function spawnradius:set_shape {shape:<sphere|square>}`: Sets the shape of the spawn radius to either circle or square.
+`/function worldutils:set_shape {shape:<sphere|square>}`: Sets the shape of the spawn radius to either circle or square.
 
-`/function spawnradius:set_config {shape:<sphere|square>, radius:<number>}`: Sets both the shape and radius of the spawn radius at once.
+`/function worldutils:set_config {shape:<sphere|square>, radius:<number>}`: Sets both the shape and radius of the spawn radius at once.
 
-`/function spawnradius:info`: Shows info about the current spawn radius and shape in chat.
+`/function worldutils:info`: Shows info about the current spawn radius and shape in chat.
 
 ## Resource Pack
 
