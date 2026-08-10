@@ -3,6 +3,7 @@
         "ttuserver:tick",
         "mannequins:tick",
         "discswapper:tick",
-        "worldutils:tick"
+        "worldutils:tick",
+        "hopper:tick"
     ]
 }
