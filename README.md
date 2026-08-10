@@ -44,6 +44,10 @@ This doesn't add spawn protection, but it notifies players when they leave the s
 
 `/function worldutils:info`: Shows info about the current spawn radius and shape in chat.
 
+`/trigger spawn_tp`: Teleports the player to the spawn point.
+
+`/trigger suicide`: Kills the player.
+
 ## Resource Pack
 
 Nothing has been added to the resource pack yet, so it is not required yet.
