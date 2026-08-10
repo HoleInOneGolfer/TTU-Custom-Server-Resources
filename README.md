@@ -1,4 +1,4 @@
-# ![Icon](pack.png) TTU Custom Server Resources
+# ![Icon](./datapack/pack.png) TTU Custom Server Resources
 
 > Created by BenGamer427
 
