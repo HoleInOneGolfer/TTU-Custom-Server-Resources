@@ -1,7 +1,5 @@
 # ![Icon](./datapack/pack.png) TTU Custom Server Resources
 
-> Created by BenGamer427
-
 These are the custom resources for the TTU server. It includes various features and enhancements to improve gameplay and provide a unique experience for players as well as the textures to help support it.
 
 ## Datapack
@@ -49,3 +47,7 @@ This doesn't add spawn protection, but it notifies players when they leave the s
 ## Resource Pack
 
 Nothing has been added to the resource pack yet, so it is not required yet.
+
+## Credits
+
+- BenGamer427
