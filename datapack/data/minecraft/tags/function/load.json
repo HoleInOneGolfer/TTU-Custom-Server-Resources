@@ -3,6 +3,8 @@
         "ttuserver:load",
         "mannequins:load",
         "discswapper:load",
-        "worldutils:load"
+        "worldutils:load",
+        "hopper:load",
+        "dye:load"
     ]
 }
