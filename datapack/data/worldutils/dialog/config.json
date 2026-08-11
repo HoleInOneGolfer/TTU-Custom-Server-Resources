@@ -12,8 +12,13 @@
             "type": "minecraft:plain_message",
             "contents": {
                 "text": "This datapack manages a dynamic spawn region around the world spawn. When players enter or leave the spawn region, they are informed with a title on their screen.",
-                "type": "text",
-                "italic": true
+                "type": "text"
+            }
+        },
+        {
+            "type": "minecraft:plain_message",
+            "contents": {
+                "text": "To manually set size run: /data modify storage worldutils:config radius set value <number>"
             }
         },
         {
