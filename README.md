@@ -76,6 +76,12 @@ To publish a new release:
 1. Run `git tag v<version_number>` to create a release tag.
 2. Run `git push origin v<version_number>` to upload the tag.
 
+To get minecraft assets to add to resource pack and datapack:
+
+1. Copy your minecraft client jar file from your `.minecraft/versions/<version>/<version>.jar` folder to another folder.
+2. Rename the jar file to a zip file and extract it.
+3. The files for the resource pack are in the `assets` folder and the files for the datapack are in the `data` folder. (These are laid out exactly how they should be in your resource/data pack so in theory you can just copy them over to your resource/data pack folders if you want to use everything. This will make your pack take up a lot of space though, so it is recommended to only copy the files you need.)
+
 ## Help
 
 - [Datapack Wiki Page](https://minecraft.wiki/w/Data_pack)
