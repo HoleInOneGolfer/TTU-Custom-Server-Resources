@@ -26,7 +26,7 @@ function mannequins:egg {name: "johnbug2007"}
 function mannequins:egg {name: "GlitchLezz"}
 function mannequins:egg {name: "Teriyaki_Sauce9"}
 function mannequins:egg {name: "Slipstreaml"}
-function mannequins:egg {name: "TyBoOnMC"}
+function mannequins:egg {name: "TyBoMC"}
 function mannequins:egg {name: "ALuckySoul"}
 function mannequins:egg {name: "FlameMaster4325"}
 function mannequins:egg {name: "Travipatty_"}

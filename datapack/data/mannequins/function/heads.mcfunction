@@ -26,7 +26,7 @@ function mannequins:head {name: "johnbug2007"}
 function mannequins:head {name: "GlitchLezz"}
 function mannequins:head {name: "Teriyaki_Sauce9"}
 function mannequins:head {name: "Slipstreaml"}
-function mannequins:head {name: "TyBoOnMC"}
+function mannequins:head {name: "TyBoMC"}
 function mannequins:head {name: "ALuckySoul"}
 function mannequins:head {name: "FlameMaster4325"}
 function mannequins:head {name: "Travipatty_"}

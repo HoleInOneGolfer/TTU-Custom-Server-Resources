@@ -26,7 +26,7 @@ function mannequins:summon {name: "johnbug2007"}
 function mannequins:summon {name: "GlitchLezz"}
 function mannequins:summon {name: "Teriyaki_Sauce9"}
 function mannequins:summon {name: "Slipstreaml"}
-function mannequins:summon {name: "TyBoOnMC"}
+function mannequins:summon {name: "TyBoMC"}
 function mannequins:summon {name: "ALuckySoul"}
 function mannequins:summon {name: "FlameMaster4325"}
 function mannequins:summon {name: "Travipatty_"}
