@@ -58,6 +58,7 @@ This doesn't add spawn protection, but it notifies players when they leave the s
 #### Pots and Sherds
 
 - Double T, replacing flow (credit: TyBoMC)
+- Raider Red, replacing explorer (credit: BenGamer427)
 
 ## Developing
 
