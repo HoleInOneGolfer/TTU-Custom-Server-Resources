@@ -55,7 +55,9 @@ This doesn't add spawn protection, but it notifies players when they leave the s
 
 ### Resource Pack
 
-Nothing has been added to the resource pack yet, so it is not required yet.
+#### Pots and Sherds
+
+- Double T (credit: TyBoMC)
 
 ## Developing
 
