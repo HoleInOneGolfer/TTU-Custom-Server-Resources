@@ -1,6 +1,6 @@
 # TTU Custom Server Resources
 
-> Current Mineraft Version: 26.2
+> Current Minecraft Version: 26.2
 
 These are the custom resources for the TTU server. It includes various features and enhancements to improve gameplay and provide a unique experience for players as well as the textures to help support it.
 
