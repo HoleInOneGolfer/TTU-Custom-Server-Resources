@@ -57,7 +57,7 @@ This doesn't add spawn protection, but it notifies players when they leave the s
 
 #### Pots and Sherds
 
-- Double T (credit: TyBoMC)
+- Double T, replacing flow (credit: TyBoMC)
 
 ## Developing
 
