@@ -21,8 +21,9 @@ jobs:
           TAG_NAME="${{ github.ref_name }}"
 
           # Define exact filenames using the tag
-          DATAPACK_FILE="ttu_server_${TAG_NAME}_datapack.zip"
-          RESOURCE_FILE="ttu_server_${TAG_NAME}_resourcepack.zip"
+          DATAPACK_FILE="ttu_server_datapack_${TAG_NAME}.zip"
+          RESOURCE_FILE="ttu_server_resourcepack_${TAG_NAME}.zip"
+          BOTH_FILE="ttu_server_packs_${TAG_NAME}.zip"
 
           # Zip datapack
           cd datapack
@@ -34,9 +35,13 @@ jobs:
           zip -r "../$RESOURCE_FILE" .
           cd ..
 
+          # Zip combined pack
+          zip -r "$BOTH_FILE" "$DATAPACK_FILE" "$RESOURCE_FILE"
+
           # Save filenames to GitHub environment so subsequent steps can use them
           echo "DATAPACK_FILE=$DATAPACK_FILE" >> $GITHUB_ENV
           echo "RESOURCE_FILE=$RESOURCE_FILE" >> $GITHUB_ENV
+          echo "BOTH_FILE=$BOTH_FILE" >> $GITHUB_ENV
 
       # 1 & 2. Upload internal workflow pipeline artifacts explicitly
       - name: Upload Artifacts
@@ -46,6 +51,7 @@ jobs:
           path: |
             ${{ env.DATAPACK_FILE }}
             ${{ env.RESOURCE_FILE }}
+            ${{ env.BOTH_FILE }}
 
       # 3. Create release, auto-generate changelog, and attach the exact zips
       - name: Create GitHub Release and Upload Assets
@@ -54,4 +60,5 @@ jobs:
           files: |
             ${{ env.DATAPACK_FILE }}
             ${{ env.RESOURCE_FILE }}
+            ${{ env.BOTH_FILE }}
           generate_release_notes: true
