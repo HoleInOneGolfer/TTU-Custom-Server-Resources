@@ -40,4 +40,4 @@ if __name__ == "__main__":
 
         f.write("\n")
         f.write(f"Total players: {len(PLAYERS)}\n")
-        f.write(f"Total Real Players: {len([p for p in PLAYERS if not p[1].startswith('Unlinked')])}\n")
+        f.write(f"Total Linked Players: {len([p for p in PLAYERS if not p[1].startswith('Unlinked')])}\n")
