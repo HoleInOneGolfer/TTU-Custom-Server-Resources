@@ -5,11 +5,11 @@ scoreboard players set @a spawn_state 2
 
 # Setup Trigger Scoreboards
 scoreboard objectives add suicide trigger
-scoreboard objectives add spawn_tp trigger
+scoreboard objectives add spawn trigger
 
 # Enable triggers for all players so they can use them
 scoreboard players enable @a suicide
-scoreboard players enable @a spawn_tp
+scoreboard players enable @a spawn
 
 # Initialize data storage defaults only if they don't exist
 execute unless data storage worldutils:config radius run data modify storage worldutils:config radius set value 10
@@ -21,6 +21,6 @@ execute unless data storage worldutils:config max_y run data modify storage worl
 execute unless data storage worldutils:config total_height run data modify storage worldutils:config total_height set value 384
 
 # Marker Management
-function worldutils:set_spawn
+execute unless entity @e[type=marker,tag=spawn_marker] run function worldutils:set_spawn
 
 tellraw @a {"text":"WorldUtils Loaded!","color":"red","bold":true}

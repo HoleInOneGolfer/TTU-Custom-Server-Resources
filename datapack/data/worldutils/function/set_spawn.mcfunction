@@ -1,6 +1,7 @@
-forceload remove ~-1 ~-1 ~1 ~1
-kill @e[type=marker,tag=spawn]
-summon marker ~0 ~0 ~0 {Tags:["spawn"],CustomName:"Spawn"}
-execute at @e[type=marker,tag=spawn] run forceload add ~-1 ~-1 ~1 ~1
+execute at @e[type=marker,tag=spawn_marker] run forceload remove ~-1 ~-1 ~1 ~1
+kill @e[type=marker,tag=spawn_marker]
 
-tellraw @s {"text":"Spawn marker set!","color":"green","bold":true}
+execute align xyz run summon marker ~ ~ ~ {Tags:["spawn_marker"],CustomName:'{"text":"Spawn Marker"}'}
+execute at @e[type=marker,tag=spawn_marker] run forceload add ~-1 ~-1 ~1 ~1
+
+execute as @a[distance=..5] run tellraw @s {"text":"Spawn marker set!","color":"green","bold":true}
