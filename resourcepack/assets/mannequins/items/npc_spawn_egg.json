@@ -1,0 +1,6 @@
+{
+    "model": {
+        "type": "minecraft:model",
+        "model": "mannequins:item/npc_spawn_egg"
+    }
+}

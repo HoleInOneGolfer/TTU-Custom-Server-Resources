@@ -60,6 +60,10 @@ This doesn't add spawn protection, but it notifies players when they leave the s
 - Double T, replacing guster (credit: TyBoMC)
 - Raider Red, replacing flow (credit: BenGamer427)
 
+#### Spawn Eggs
+
+- Add new spawn egg `mannequins:npc_spawn_egg` for spawning mannequins. Its texture is the NPC Spawn Egg texture from bedrock edition.
+
 ## Developing
 
 If you want to help improve these custom resources, make your changes locally and send them as a pull request.
