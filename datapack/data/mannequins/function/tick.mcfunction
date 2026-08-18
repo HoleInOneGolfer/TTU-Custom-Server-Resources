@@ -3,7 +3,7 @@ function mannequins:summon {name: "ALuckySoul"}
 function mannequins:summon {name: "ArcticSpy201"}
 function mannequins:summon {name: "Atlas8274"}
 function mannequins:summon {name: "BadDriver64"}
-function mannequins:summon {name: "BellaTay"}
+function mannequins:summon {name: "Bella_Tay"}
 function mannequins:summon {name: "BenGamer427"}
 function mannequins:summon {name: "CNMD746"}
 function mannequins:summon {name: "SomeDankGuy"}
@@ -20,7 +20,7 @@ function mannequins:summon {name: "BigPattyT"}
 function mannequins:summon {name: "Slipstreaml"}
 function mannequins:summon {name: "slycery"}
 function mannequins:summon {name: "Teriyaki_Sauce9"}
-function mannequins:summon {name: "Travipatty"}
+function mannequins:summon {name: "Travipatty_"}
 function mannequins:summon {name: "TurboHello"}
 function mannequins:summon {name: "TyBoMC"}
 function mannequins:summon {name: "Notch"}

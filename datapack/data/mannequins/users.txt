@@ -1,11 +1,11 @@
-Updated 08/17/2026 @ 16:41:04
+Updated 08/18/2026 @ 12:47:43
 
 3DAY_MD              -> 3DAYZMD
 ALuckySoul           -> ALuckySoul
 ArcticSpy201         -> ArcticSpy201
 Atlas8274            -> Atlas
 BadDriver64          -> BadDriver64
-BellaTay             -> Bella
+Bella_Tay            -> Bella
 BenGamer427          -> BenGamer427
 CNMD746              -> CNMD746
 SomeDankGuy          -> DankyPoo
@@ -22,7 +22,7 @@ BigPattyT            -> Patrickk
 Slipstreaml          -> Slipstreaml
 slycery              -> slycery
 Teriyaki_Sauce9      -> Teriyaki_Sauce9
-Travipatty           -> Travipatty_
+Travipatty_          -> Travipatty_
 TurboHello           -> TurboHello
 TyBoMC               -> TyBo
 Notch                -> Unlinked
@@ -33,6 +33,5 @@ TheFakeAlex          -> Unlinked
 TheRealSteve         -> Unlinked
 TheWinBuilds         -> Win
 Noid_exe             -> ~Noid~
-
 Total players: 33
 Total Linked Players: 27

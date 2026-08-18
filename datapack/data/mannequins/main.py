@@ -5,9 +5,21 @@ PLAYER_TXT = "./users.txt"
 
 REGES = r"(.+?)(?:\s*\((.+?) \))?\s*->\s*(.+)"
 
+EGG_LINE = 'function mannequins:egg {name: "{minecraft_username}"}'
+HEAD_LINE = 'function mannequins:head {name: "{minecraft_username}"}'
+TICK_LINE = 'function mannequins:summon {name: "{minecraft_username}"}'
+
+EGGS_PATH = "./function/eggs.mcfunction"
+HEADS_PATH = "./function/heads.mcfunction"
+TICK_PATH = "./function/tick.mcfunction"
+
 PLAYERS = []
+EGGS = []
+HEADS = []
+TICKS = []
 
 def main():
+    # Get Players
     with open(PLAYER_TXT, "r") as f:
         players = f.readlines()
         for p in players:
@@ -22,6 +34,17 @@ def main():
                 print(f"Invalid player format: {p.strip()}")
     PLAYERS.sort(key=lambda x: x[1].lower())
 
+    # Get Eggs, Heads, and Ticks
+    for p in PLAYERS:
+        EGG_LINE_FORMATTED = EGG_LINE.replace("{minecraft_username}", p[0])
+        EGGS.append(EGG_LINE_FORMATTED)
+
+        HEAD_LINE_FORMATTED = HEAD_LINE.replace("{minecraft_username}", p[0])
+        HEADS.append(HEAD_LINE_FORMATTED)
+
+        TICK_LINE_FORMATTED = TICK_LINE.replace("{minecraft_username}", p[0])
+        TICKS.append(TICK_LINE_FORMATTED)
+
 
 if __name__ == "__main__":
     # change the working directory to the script's directory
@@ -35,9 +58,17 @@ if __name__ == "__main__":
         f.write("\n")
 
         # print the players in a lined up format
-        for _ in PLAYERS:
-            f.write(f"{_[0]:<20} -> {_[1]}\n")
+        f.write("\n".join([f"{p[0]:<20} -> {p[1]}" for p in PLAYERS]))
 
         f.write("\n")
         f.write(f"Total players: {len(PLAYERS)}\n")
         f.write(f"Total Linked Players: {len([p for p in PLAYERS if not p[1].startswith('Unlinked')])}\n")
+
+    with open(EGGS_PATH, "w") as f:
+        f.write("\n".join(EGGS))
+
+    with open(HEADS_PATH, "w") as f:
+        f.write("\n".join(HEADS))
+
+    with open(TICK_PATH, "w") as f:
+        f.write("\n".join(TICKS))
