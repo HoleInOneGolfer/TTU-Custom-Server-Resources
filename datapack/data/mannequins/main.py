@@ -60,7 +60,7 @@ if __name__ == "__main__":
         # print the players in a lined up format
         f.write("\n".join([f"{p[0]:<20} -> {p[1]}" for p in PLAYERS]))
 
-        f.write("\n")
+        f.write("\n\n")
         f.write(f"Total players: {len(PLAYERS)}\n")
         f.write(f"Total Linked Players: {len([p for p in PLAYERS if not p[1].startswith('Unlinked')])}\n")
 

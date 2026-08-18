@@ -1,4 +1,4 @@
-Updated 08/18/2026 @ 12:47:43
+Updated 08/18/2026 @ 12:48:41
 
 3DAY_MD              -> 3DAYZMD
 ALuckySoul           -> ALuckySoul
@@ -33,5 +33,6 @@ TheFakeAlex          -> Unlinked
 TheRealSteve         -> Unlinked
 TheWinBuilds         -> Win
 Noid_exe             -> ~Noid~
+
 Total players: 33
 Total Linked Players: 27
