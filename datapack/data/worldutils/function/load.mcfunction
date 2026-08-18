@@ -23,4 +23,4 @@ execute unless data storage worldutils:config total_height run data modify stora
 # Marker Management
 function worldutils:set_spawn
 
-tellraw @a {"text":"worldutils Loaded!","color":"red","bold":true}
+tellraw @a {"text":"WorldUtils Loaded!","color":"red","bold":true}
