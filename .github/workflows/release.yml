@@ -21,9 +21,9 @@ jobs:
           TAG_NAME="${{ github.ref_name }}"
 
           # Define exact filenames using the tag
-          DATAPACK_FILE="ttu_server_datapack_${TAG_NAME}.zip"
-          RESOURCE_FILE="ttu_server_resourcepack_${TAG_NAME}.zip"
-          BOTH_FILE="ttu_server_packs_${TAG_NAME}.zip"
+          DATAPACK_FILE="ttu_server_datapack.zip"
+          RESOURCE_FILE="ttu_server_resourcepack.zip"
+          BOTH_FILE="ttu_server_packs.zip"
 
           # Zip datapack
           cd datapack
