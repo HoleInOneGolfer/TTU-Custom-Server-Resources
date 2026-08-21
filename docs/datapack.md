@@ -2,3 +2,50 @@
 layout: default
 title: Data Pack
 ---
+
+# Datapack
+
+The pack is made up of several modules, each providing different functionalities. Below is a list of the available modules and the information about them.
+
+## DiscSwapper
+
+This module is specifically designed to pair with the audioplayer mod by letting the player use any disc model the want for their custom music discs.
+
+| Command                                                       | Description                                                    |
+| ------------------------------------------------------------- | -------------------------------------------------------------- |
+| `/function discswapper:menu` or `/trigger discmenu`           | Shows a custom dialog menu for swapping music discs.           |
+| `/function discswapper:menu_alt` or `/trigger discmenu set 2` | Shows an alternative text-based menu for swapping music discs. |
+| `/trigger discmodel set <number>`                             | Changes the model of the music disc to the specified number.   |
+
+## Mannequin
+
+The players are not generated automatically. They are manually added to the datapack. For new players you have to change a bunch of stuff. These are also not real players, they are just mannequins that look like players. The mannequins are spawned on bats that are named after the players. When they first spawn in, they look at the nearest player and the bat is killed. The mannequins are not invulnerable and have the tag player. the commands where you have to specify the name of the player work for any name, but the spawn eggs only work for the implemented players.
+
+| Command                                       | Description                                                                                           | Example                                      |
+| --------------------------------------------- | ----------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| `/function mannequin:egg {name:<name>}`       | Gives the player the spawn egg for any player with specific name. _Name must be in `tick.mcfunction`_ | `/function mannequins:egg {name:jeb_}`       |
+| `/function mannequin:head {name:<name>}`      | Gives the player the heads for any player with specific name.                                         | `/function mannequins:head {name:jeb_}`      |
+| `/function mannequin:mannequin {name:<name>}` | Spawns the mannequin for the player with specific name.                                               | `/function mannequins:mannequin {name:jeb_}` |
+| `/function mannequin:eggs`                    | Gives the player all the spawn eggs for all the users implemented.                                    |
+| `/function mannequin:heads`                   | Gives the player all the heads for all the users implemented.                                         |
+
+## WorldUtils
+
+This doesn't add spawn protection, but it notifies players when they leave the spawn area in case your server has rules about griefing or PvP in the spawn area. It also allows you to have a tp to spawn and a suicide command for players to use.
+
+| Command                                                                    | Description                                                           | Example                                                     |
+| -------------------------------------------------------------------------- | --------------------------------------------------------------------- | ----------------------------------------------------------- |
+| `/function worldutils:config`                                              | Shows a custom dialog menu for configuring the spawn radius settings. |
+| `/function worldutils:set_spawn`                                           | Sets the spawn to the current location of the player.                 |
+| `/function worldutils:set_radius {radius:<number>}`                        | Sets the spawn radius to the specified number.                        | `/function worldutils:set_radius {radius:10}`               |
+| `/function worldutils:set_shape {shape:<sphere,square>}`                   | Sets the shape of the spawn radius to either circle or square.        | `/function worldutils:set_shape {shape:square}`             |
+| `/function worldutils:set_config {shape:<sphere,square>, radius:<number>}` | Sets both the shape and radius of the spawn radius at once.           | `/function worldutils:set_config {shape:square, radius:10}` |
+| `/function worldutils:info`                                                | Shows info about the current spawn radius and shape in chat.          |
+| `/trigger spawn_tp`                                                        | Teleports the player to the spawn point.                              |
+| `/trigger suicide`                                                         | Kills the player.                                                     |
+
+## Recipe Changes
+
+- The hopper now doesn't require a chest to craft. It just requires 5 iron ingots in the same pattern.
+- Brown dye can be crafted using blue, yellow, and red dyes.
+- Green dye can be crafted using blue and yellow dyes.
