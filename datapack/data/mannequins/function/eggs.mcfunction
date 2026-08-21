@@ -5,6 +5,7 @@ function mannequins:egg {name: "Atlas8274"}
 function mannequins:egg {name: "BadDriver64"}
 function mannequins:egg {name: "Bella_Tay"}
 function mannequins:egg {name: "BenGamer427"}
+function mannequins:egg {name: "BonJovi"}
 function mannequins:egg {name: "CNMD746"}
 function mannequins:egg {name: "SomeDankGuy"}
 function mannequins:egg {name: "Drevo3000"}
@@ -20,7 +21,7 @@ function mannequins:egg {name: "BigPattyT"}
 function mannequins:egg {name: "Slipstreaml"}
 function mannequins:egg {name: "slycery"}
 function mannequins:egg {name: "Teriyaki_Sauce9"}
-function mannequins:egg {name: "Travipatty_"}
+function mannequins:egg {name: "Travipatty"}
 function mannequins:egg {name: "TurboHello"}
 function mannequins:egg {name: "TyBoMC"}
 function mannequins:egg {name: "Notch"}
