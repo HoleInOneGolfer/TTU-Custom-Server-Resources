@@ -1,2 +1,7 @@
 title: TTU Custom Server Resources
+description: Documentation and server info for the TTU Minecraft Server.
+url: "https://benbowles.me"
 baseurl: "/TTU-Custom-Server-Resources"
+
+markdown: kramdown
+highlighter: rouge
