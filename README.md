@@ -64,6 +64,10 @@ This doesn't add spawn protection, but it notifies players when they leave the s
 
 - Add new spawn egg `mannequins:npc_spawn_egg` for spawning mannequins. Its texture is the NPC Spawn Egg texture from bedrock edition.
 
+#### True Ending: Ender Dragon Music
+
+- [Modrinth Link](https://modrinth.com/resourcepack/true-ending-ender-dragon-music)
+
 ## Developing
 
 If you want to help improve these custom resources, make your changes locally and send them as a pull request.
