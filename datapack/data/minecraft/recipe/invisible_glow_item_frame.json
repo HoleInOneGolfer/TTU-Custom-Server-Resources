@@ -17,7 +17,7 @@
                 "You will need to recraft if placed and destroyed."
             ],
             "minecraft:entity_data": {
-                "id": "minecraft:item_frame",
+                "id": "minecraft:glow_item_frame",
                 "Invisible": true
             }
         }
