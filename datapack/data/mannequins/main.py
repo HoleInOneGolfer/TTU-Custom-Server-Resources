@@ -29,6 +29,9 @@ def main():
                 discord_username = discord_username.strip("@")
                 if new_minecraft_username:
                     minecraft_username = new_minecraft_username
+                # drop unlinked
+                if discord_username.lower() == "unlinked":
+                    continue
                 PLAYERS.append((minecraft_username, discord_username))
             else:
                 print(f"Invalid player format: {p.strip()}")

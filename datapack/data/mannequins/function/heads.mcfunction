@@ -3,7 +3,7 @@ function mannequins:head {name: "ALuckySoul"}
 function mannequins:head {name: "ArcticSpy201"}
 function mannequins:head {name: "Atlas8274"}
 function mannequins:head {name: "BadDriver64"}
-function mannequins:head {name: "Bella_Tay"}
+function mannequins:head {name: "BellaTay"}
 function mannequins:head {name: "BenGamer427"}
 function mannequins:head {name: "BonJovi"}
 function mannequins:head {name: "CNMD746"}
@@ -21,14 +21,10 @@ function mannequins:head {name: "BigPattyT"}
 function mannequins:head {name: "Slipstreaml"}
 function mannequins:head {name: "slycery"}
 function mannequins:head {name: "Teriyaki_Sauce9"}
+function mannequins:head {name: "Greenbeean"}
 function mannequins:head {name: "Travipatty"}
 function mannequins:head {name: "TurboHello"}
+function mannequins:head {name: "BE-slycery"}
 function mannequins:head {name: "TyBoMC"}
-function mannequins:head {name: "Notch"}
-function mannequins:head {name: "Herobrinelover69"}
-function mannequins:head {name: "ATestBot42"}
-function mannequins:head {name: "CabrinaSarpenter"}
-function mannequins:head {name: "TheFakeAlex"}
-function mannequins:head {name: "TheRealSteve"}
 function mannequins:head {name: "TheWinBuilds"}
 function mannequins:head {name: "Noid_exe"}
