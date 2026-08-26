@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        [
+            "minecraft:item_frame"
+        ],
+        [
+            "minecraft:glass_pane"
+        ]
+    ],
+    "result": {
+        "id": "minecraft:item_frame",
+        "components": {
+            "minecraft:enchantment_glint_override": true,
+            "minecraft:item_name": "Invisible Item Frame",
+            "minecraft:lore": [
+                "You will need to recraft if placed and destroyed."
+            ],
+            "minecraft:entity_data": {
+                "id": "minecraft:item_frame",
+                "Invisible": true
+            }
+        }
+    }
+}
