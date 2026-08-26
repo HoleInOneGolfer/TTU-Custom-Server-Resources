@@ -52,6 +52,7 @@ This doesn't add spawn protection, but it notifies players when they leave the s
 - The hopper now doesn't require a chest to craft. It just requires 5 iron ingots in the same pattern.
 - Brown dye can be crafted using blue, yellow, and red dyes.
 - Green dye can be crafted using blue and yellow dyes.
+- Invsible glow and normal items frames when crafted with a glass pane.
 
 ### Resource Pack
 
