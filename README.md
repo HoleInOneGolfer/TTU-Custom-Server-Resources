@@ -22,15 +22,13 @@ This module is specifically designed to pair with the audioplayer mod by letting
 
 #### Mannequin
 
-The players are not generated automatically. They are manually added to the datapack. For new players you have to change a bunch of stuff. These are also not real players, they are just mannequins that look like players. The mannequins are spawned on bats that are named after the players. When they first spawn in, they look at the nearest player and the bat is killed. The mannequins are not invulnerable and have the tag player. the commands where you have to specify the name of the player work for any name, but the spawn eggs only work for the implemented players.
-
-| Command                                       | Description                                                                                           | Example                                      |
-| --------------------------------------------- | ----------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| `/function mannequin:egg {name:<name>}`       | Gives the player the spawn egg for any player with specific name. _Name must be in `tick.mcfunction`_ | `/function mannequins:egg {name:jeb_}`       |
-| `/function mannequin:head {name:<name>}`      | Gives the player the heads for any player with specific name.                                         | `/function mannequins:head {name:jeb_}`      |
-| `/function mannequin:mannequin {name:<name>}` | Spawns the mannequin for the player with specific name.                                               | `/function mannequins:mannequin {name:jeb_}` |
-| `/function mannequin:eggs`                    | Gives the player all the spawn eggs for all the users implemented.                                    |
-| `/function mannequin:heads`                   | Gives the player all the heads for all the users implemented.                                         |
+| Command                                       | Description                                                        | Example                                      |
+| --------------------------------------------- | ------------------------------------------------------------------ | -------------------------------------------- |
+| `/function mannequin:egg {name:<name>}`       | Gives the player the spawn egg for any player with specific name.  | `/function mannequins:egg {name:jeb_}`       |
+| `/function mannequin:head {name:<name>}`      | Gives the player the heads for any player with specific name.      | `/function mannequins:head {name:jeb_}`      |
+| `/function mannequin:mannequin {name:<name>}` | Spawns the mannequin for the player with specific name.            | `/function mannequins:mannequin {name:jeb_}` |
+| `/function mannequin:eggs`                    | Gives the player all the spawn eggs for all the users implemented. |
+| `/function mannequin:heads`                   | Gives the player all the heads for all the users implemented.      |
 
 #### WorldUtils
 

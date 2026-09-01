@@ -11,7 +11,6 @@ TICK_LINE = 'function mannequins:summon {name: "{minecraft_username}"}'
 
 EGGS_PATH = "./function/eggs.mcfunction"
 HEADS_PATH = "./function/heads.mcfunction"
-TICK_PATH = "./function/tick.mcfunction"
 
 PLAYERS = []
 EGGS = []
@@ -45,9 +44,6 @@ def main():
         HEAD_LINE_FORMATTED = HEAD_LINE.replace("{minecraft_username}", p[0])
         HEADS.append(HEAD_LINE_FORMATTED)
 
-        TICK_LINE_FORMATTED = TICK_LINE.replace("{minecraft_username}", p[0])
-        TICKS.append(TICK_LINE_FORMATTED)
-
 
 if __name__ == "__main__":
     # change the working directory to the script's directory
@@ -72,6 +68,3 @@ if __name__ == "__main__":
 
     with open(HEADS_PATH, "w") as f:
         f.write("\n".join(HEADS))
-
-    with open(TICK_PATH, "w") as f:
-        f.write("\n".join(TICKS))
