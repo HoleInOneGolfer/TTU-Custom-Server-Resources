@@ -1,0 +1,42 @@
+{
+    "type": "minecraft:multi_action",
+    "title": {
+        "text": "Mannequins Menu",
+        "color": "gold",
+        "bold": true,
+        "underlined": true
+    },
+    "inputs": [
+        {
+            "type": "minecraft:text",
+            "key": "username",
+            "label": {
+                "text": "Username"
+            },
+            "initial": "steve"
+        }
+    ],
+    "actions": [
+        {
+            "label": "Spawn Egg",
+            "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/function mannequins:egg {name:$(username)}"
+            }
+        },
+        {
+            "label": "Head",
+            "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/function mannequins:head {name:$(username)}"
+            }
+        },
+        {
+            "label": "Summon",
+            "action": {
+                "type": "minecraft:dynamic/run_command",
+                "template": "/function mannequins:mannequin {name:$(username)}"
+            }
+        }
+    ]
+}

@@ -22,13 +22,14 @@ This module is specifically designed to pair with the audioplayer mod by letting
 
 #### Mannequin
 
-| Command                                       | Description                                                        | Example                                      |
-| --------------------------------------------- | ------------------------------------------------------------------ | -------------------------------------------- |
-| `/function mannequin:egg {name:<name>}`       | Gives the player the spawn egg for any player with specific name.  | `/function mannequins:egg {name:jeb_}`       |
-| `/function mannequin:head {name:<name>}`      | Gives the player the heads for any player with specific name.      | `/function mannequins:head {name:jeb_}`      |
-| `/function mannequin:mannequin {name:<name>}` | Spawns the mannequin for the player with specific name.            | `/function mannequins:mannequin {name:jeb_}` |
-| `/function mannequin:eggs`                    | Gives the player all the spawn eggs for all the users implemented. |
-| `/function mannequin:heads`                   | Gives the player all the heads for all the users implemented.      |
+| Command                                       | Description                                                                         | Example                                      |
+| --------------------------------------------- | ----------------------------------------------------------------------------------- | -------------------------------------------- |
+| `/function mannequin:egg {name:<name>}`       | Gives the player the spawn egg for any player with specific name.                   | `/function mannequins:egg {name:jeb_}`       |
+| `/function mannequin:head {name:<name>}`      | Gives the player the heads for any player with specific name.                       | `/function mannequins:head {name:jeb_}`      |
+| `/function mannequin:mannequin {name:<name>}` | Spawns the mannequin for the player with specific name.                             | `/function mannequins:mannequin {name:jeb_}` |
+| `/function mannequin:eggs`                    | Gives the player all the spawn eggs for all the users implemented.                  |
+| `/function mannequin:heads`                   | Gives the player all the heads for all the users implemented.                       |
+| `/function mannequin:menu`                    | Shows a custom dialog menu for spawning mannequins and giving heads and spawn eggs. | `/function mannequins:menu`                  |
 
 #### WorldUtils
 
