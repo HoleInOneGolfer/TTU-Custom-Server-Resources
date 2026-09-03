@@ -1,6 +1,4 @@
 {
-  
-  
   "music.dragon_defeat": {
     "sounds": [
       {
@@ -8,7 +6,7 @@
         "replace": true,
         "weight": 10000000,
         "pitch": 1
-        }
+      }
     ]
   },
   "music.dragon": {
@@ -18,7 +16,7 @@
         "replace": true,
         "weight": 10000000,
         "pitch": 1
-        }
+      }
     ]
   },
   "music.sily": {
@@ -28,7 +26,7 @@
         "replace": true,
         "weight": 10000000,
         "pitch": 1
-        }
+      }
     ]
   }
 }

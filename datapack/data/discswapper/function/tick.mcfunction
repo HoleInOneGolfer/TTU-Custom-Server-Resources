@@ -1,6 +1,8 @@
+# Open the requested DiscSwapper menu
 execute as @a if score @s discmenu matches 1 run function discswapper:menu
 execute as @a if score @s discmenu matches 2 run function discswapper:menu_alt
 
+# Apply selected music disc model to the held disc item
 execute as @a if score @s discmodel matches 1 if items entity @s weapon.mainhand #discswapper:music_discs run item modify entity @s weapon.mainhand {function:"set_components",components:{"item_model":"music_disc_13"}}
 execute as @a if score @s discmodel matches 2 if items entity @s weapon.mainhand #discswapper:music_discs run item modify entity @s weapon.mainhand {function:"set_components",components:{"item_model":"music_disc_cat"}}
 execute as @a if score @s discmodel matches 3 if items entity @s weapon.mainhand #discswapper:music_discs run item modify entity @s weapon.mainhand {function:"set_components",components:{"item_model":"music_disc_blocks"}}
@@ -24,8 +26,8 @@ execute as @a if score @s discmodel matches 20 if items entity @s weapon.mainhan
 execute as @a if score @s discmodel matches 21 if items entity @s weapon.mainhand #discswapper:music_discs run item modify entity @s weapon.mainhand {function:"set_components",components:{"item_model":"music_disc_lava_chicken"}}
 execute as @a if score @s discmodel matches 22 if items entity @s weapon.mainhand #discswapper:music_discs run item modify entity @s weapon.mainhand {function:"set_components",components:{"item_model":"music_disc_bounce"}}
 
+# Reset and re-enable triggers every tick
 scoreboard players reset @a discmodel
 scoreboard players reset @a discmenu
-
 scoreboard players enable @a discmodel
 scoreboard players enable @a discmenu

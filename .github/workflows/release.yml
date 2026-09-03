@@ -13,52 +13,32 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build Zips
+      - name: Build release artifacts
+        run: scripts/package.sh
+
+      - name: Export artifact file names
         run: |
-          TAG_NAME="${{ github.ref_name }}"
+          echo "DATAPACK_FILE=dist/TTU-Datapack.zip" >> "$GITHUB_ENV"
+          echo "RESOURCEPACK_FILE=dist/TTU-Resourcepack.zip" >> "$GITHUB_ENV"
+          echo "BUNDLE_FILE=dist/TTU-Server-Packs.zip" >> "$GITHUB_ENV"
 
-          # Define exact filenames using the tag
-          DATAPACK_FILE="TTU-Datapack.zip"
-          RESOURCE_FILE="TTU-Resourcepack.zip"
-          BOTH_FILE="TTU-Server-Packs.zip"
-
-          # Zip datapack
-          cd datapack
-          zip -r "../$DATAPACK_FILE" .
-          cd ..
-
-          # Zip resourcepack
-          cd resourcepack
-          zip -r "../$RESOURCE_FILE" .
-          cd ..
-
-          # Zip combined pack
-          zip -r "$BOTH_FILE" "$DATAPACK_FILE" "$RESOURCE_FILE"
-
-          # Save filenames to GitHub environment so subsequent steps can use them
-          echo "DATAPACK_FILE=$DATAPACK_FILE" >> $GITHUB_ENV
-          echo "RESOURCE_FILE=$RESOURCE_FILE" >> $GITHUB_ENV
-          echo "BOTH_FILE=$BOTH_FILE" >> $GITHUB_ENV
-
-      # 1 & 2. Upload internal workflow pipeline artifacts explicitly
-      - name: Upload Artifacts
+      - name: Upload workflow artifacts
         uses: actions/upload-artifact@v4
         with:
           name: server-packs
           path: |
             ${{ env.DATAPACK_FILE }}
-            ${{ env.RESOURCE_FILE }}
-            ${{ env.BOTH_FILE }}
+            ${{ env.RESOURCEPACK_FILE }}
+            ${{ env.BUNDLE_FILE }}
 
-      # 3. Create release, auto-generate changelog, and attach the exact zips
-      - name: Create GitHub Release and Upload Assets
+      - name: Create GitHub release and upload assets
         uses: softprops/action-gh-release@v3
         with:
           files: |
             ${{ env.DATAPACK_FILE }}
-            ${{ env.RESOURCE_FILE }}
-            ${{ env.BOTH_FILE }}
+            ${{ env.RESOURCEPACK_FILE }}
+            ${{ env.BUNDLE_FILE }}
           generate_release_notes: true

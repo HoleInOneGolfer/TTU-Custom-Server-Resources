@@ -1,105 +1,114 @@
 # TTU Custom Server Resources
 
-> Current Minecraft Version: 26.2
+Custom datapack and resourcepack content for the TTU Minecraft server.
 
-These are the custom resources for the TTU server. It includes various features and enhancements to improve gameplay and provide a unique experience for players as well as the textures to help support it.
+> Target version: Minecraft Java Edition `1.21.6`
 
-## Features
+## Project Overview
 
-### Datapack
+This repository ships two synchronized packs:
 
-The pack is made up of several modules, each providing different functionalities. Below is a list of the available modules and the information about them.
+- `datapack/` — gameplay logic, triggers, custom recipes, and dialog flows.
+- `resourcepack/` — textures, language overrides, item models, and custom audio mappings.
 
-#### DiscSwapper
+### Feature Breakdown
 
-This module is specifically designed to pair with the audioplayer mod by letting the player use any disc model the want for their custom music discs.
+#### Music Disc Swapper (`discswapper`)
+- Lets players remap held music disc models with a dialog menu or trigger command.
+- Supports both a GUI dialog (`discswapper:menu`) and text fallback (`discswapper:menu_alt`).
 
-| Command                                                       | Description                                                    |
-| ------------------------------------------------------------- | -------------------------------------------------------------- |
-| `/function discswapper:menu` or `/trigger discmenu`           | Shows a custom dialog menu for swapping music discs.           |
-| `/function discswapper:menu_alt` or `/trigger discmenu set 2` | Shows an alternative text-based menu for swapping music discs. |
-| `/trigger discmodel set <number>`                             | Changes the model of the music disc to the specified number.   |
+#### Mannequin NPCs (`mannequins`)
+- Provides helper functions to generate mannequin spawn eggs, heads, and mannequin entities.
+- Includes a dialog menu for quick username input and spawn actions.
+- Includes Python tooling to regenerate batch `eggs.mcfunction` and `heads.mcfunction` from `users.txt`.
 
-#### Mannequin
+#### World Utilities (`worldutils`)
+- Tracks spawn-region entry/exit and notifies players.
+- Provides `/trigger spawn` teleport and `/trigger suicide` commands.
+- Supports configurable spawn radius and shape (square/sphere) via storage + dialog config.
 
-| Command                                       | Description                                                                         | Example                                      |
-| --------------------------------------------- | ----------------------------------------------------------------------------------- | -------------------------------------------- |
-| `/function mannequin:egg {name:<name>}`       | Gives the player the spawn egg for any player with specific name.                   | `/function mannequins:egg {name:jeb_}`       |
-| `/function mannequin:head {name:<name>}`      | Gives the player the heads for any player with specific name.                       | `/function mannequins:head {name:jeb_}`      |
-| `/function mannequin:mannequin {name:<name>}` | Spawns the mannequin for the player with specific name.                             | `/function mannequins:mannequin {name:jeb_}` |
-| `/function mannequin:eggs`                    | Gives the player all the spawn eggs for all the users implemented.                  |
-| `/function mannequin:heads`                   | Gives the player all the heads for all the users implemented.                       |
-| `/function mannequin:menu`                    | Shows a custom dialog menu for spawning mannequins and giving heads and spawn eggs. | `/function mannequins:menu`                  |
+#### Custom Recipe Adjustments (`data/minecraft/recipe`)
+- Hopper recipe variant (no chest requirement).
+- Additional dye conversion recipes.
+- Invisible item frame recipes.
 
-#### WorldUtils
+## Repository Structure
 
-This doesn't add spawn protection, but it notifies players when they leave the spawn area in case your server has rules about griefing or PvP in the spawn area. It also allows you to have a tp to spawn and a suicide command for players to use.
+```text
+.
+├── .github/workflows/release.yml     # Release packaging workflow
+├── datapack/                         # Datapack root
+│   ├── data/
+│   │   ├── discswapper/
+│   │   ├── mannequins/
+│   │   ├── worldutils/
+│   │   ├── ttuserver/
+│   │   └── minecraft/                # function tags + recipes
+│   ├── pack.mcmeta
+│   └── pack.png
+├── resourcepack/                     # Resourcepack root
+│   ├── assets/minecraft/
+│   ├── assets/mannequins/
+│   ├── assets/true_ending/
+│   ├── pack.mcmeta
+│   └── pack.png
+└── scripts/
+    ├── dev.sh                        # Cross-platform dev helper (bash)
+    ├── help.bat                      # Windows helper wrapper
+    └── package.sh                    # Shared packaging script (local + CI)
+```
 
-| Command                                                                    | Description                                                           | Example                                                     |
-| -------------------------------------------------------------------------- | --------------------------------------------------------------------- | ----------------------------------------------------------- |
-| `/function worldutils:config`                                              | Shows a custom dialog menu for configuring the spawn radius settings. |
-| `/function worldutils:set_spawn`                                           | Sets the spawn to the current location of the player.                 |
-| `/function worldutils:set_radius {radius:<number>}`                        | Sets the spawn radius to the specified number.                        | `/function worldutils:set_radius {radius:10}`               |
-| `/function worldutils:set_shape {shape:<sphere,square>}`                   | Sets the shape of the spawn radius to either circle or square.        | `/function worldutils:set_shape {shape:square}`             |
-| `/function worldutils:set_config {shape:<sphere,square>, radius:<number>}` | Sets both the shape and radius of the spawn radius at once.           | `/function worldutils:set_config {shape:square, radius:10}` |
-| `/function worldutils:info`                                                | Shows info about the current spawn radius and shape in chat.          |
-| `/trigger spawn_tp`                                                        | Teleports the player to the spawn point.                              |
-| `/trigger suicide`                                                         | Kills the player.                                                     |
+## Local Development Setup
 
-#### Recipe Changes
+1. Clone the repository.
+2. Create symlinks:
+   - Link `datapack/` into your world `.../saves/<world>/datapacks/` directory.
+   - Link `resourcepack/` into your `.minecraft/resourcepacks/` directory.
+3. In `.minecraft/allowed_symlinks.txt`, add the absolute paths to both linked source folders.
+4. Enable the datapack and resourcepack in your local test world.
 
-- The hopper now doesn't require a chest to craft. It just requires 5 iron ingots in the same pattern.
-- Brown dye can be crafted using blue, yellow, and red dyes.
-- Green dye can be crafted using blue and yellow dyes.
-- Invsible glow and normal items frames when crafted with a glass pane.
+## Development Commands
 
-### Resource Pack
+### Bash / Linux / macOS / Git Bash
 
-#### Pots and Sherds
+```bash
+scripts/dev.sh help
+scripts/dev.sh validate-json
+scripts/dev.sh validate-python
+scripts/dev.sh package
+```
 
-- Double T, replacing guster (credit: TyBoMC)
-- Raider Red, replacing flow (credit: BenGamer427)
+### Windows Command Prompt
 
-#### Spawn Eggs
+```bat
+help.bat help
+help.bat validate-json
+help.bat validate-python
+help.bat package
+```
 
-- Add new spawn egg `mannequins:npc_spawn_egg` for spawning mannequins. Its texture is the NPC Spawn Egg texture from bedrock edition.
+Packaging outputs are written to `dist/`.
 
-#### True Ending: Ender Dragon Music
+## CI/CD Release Flow
 
-- [Modrinth Link](https://modrinth.com/resourcepack/true-ending-ender-dragon-music)
+`/.github/workflows/release.yml` runs on tags matching `v*.*.*` and:
 
-## Developing
+1. Builds zipped artifacts with `scripts/package.sh`.
+2. Uploads artifacts to the workflow run.
+3. Publishes a GitHub release with the generated zip files.
 
-If you want to help improve these custom resources, make your changes locally and send them as a pull request.
-
-To set up the project for development:
-
-1. Copy this repository to your computer.
-2. Create two symlinks so Minecraft can use the files directly:
-   1. Link the `datapack` folder to your world's `saves/<world_name>/datapacks` folder.
-   2. Link the `resourcepack` folder to your Minecraft `resourcepacks` folder.
-3. Allow symlinks in Minecraft:
-   1. In your `.minecraft` folder, create a file named `allowed_symlinks.txt`.
-   2. Add the paths to the source `datapack` and `resourcepack` folders in this repository on two separate lines.
-
-To publish a new release:
-
-1. Run `git tag v<version_number>` to create a release tag.
-2. Run `git push origin v<version_number>` to upload the tag.
-
-To get minecraft assets to add to resource pack and datapack:
-
-1. Copy your minecraft client jar file from your `.minecraft/versions/<version>/<version>.jar` folder to another folder.
-2. Rename the jar file to a zip file and extract it.
-3. The files for the resource pack are in the `assets` folder and the files for the datapack are in the `data` folder. (These are laid out exactly how they should be in your resource/data pack so in theory you can just copy them over to your resource/data pack folders if you want to use everything. This will make your pack take up a lot of space though, so it is recommended to only copy the files you need.)
-
-## Help
-
-- [Datapack Wiki Page](https://minecraft.wiki/w/Data_pack)
-- [Resource Pack Wiki Page](https://minecraft.wiki/w/Resource_pack)
-- If you need help, you can also try searching the issue or topic on Google.
+Produced artifacts:
+- `dist/TTU-Datapack.zip`
+- `dist/TTU-Resourcepack.zip`
+- `dist/TTU-Server-Packs.zip`
 
 ## Credits
 
-- [BenGamer427](https://github.com/HoleInOneGolfer)
-- [TyBoMC](https://namemc.com/profile/TyBoMC.1)
+- **Datapack and repository owner:** [BenGamer427 / HoleInOneGolfer](https://github.com/HoleInOneGolfer)
+- **Custom pottery assets:** [TyBoMC](https://namemc.com/profile/TyBoMC.1)
+- **True Ending resourcepack audio:** [True Ending: Ender Dragon Music (Modrinth)](https://modrinth.com/resourcepack/true-ending-ender-dragon-music)
+
+## Reference Links
+
+- [Minecraft Data Pack Wiki](https://minecraft.wiki/w/Data_pack)
+- [Minecraft Resource Pack Wiki](https://minecraft.wiki/w/Resource_pack)

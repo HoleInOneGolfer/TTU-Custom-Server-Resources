@@ -1,3 +1,2 @@
 @echo off
-
-tree > tree.txt
+call "%~dp0scripts\help.bat" %*

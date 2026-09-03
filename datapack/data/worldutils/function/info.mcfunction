@@ -1,3 +1,4 @@
+# Show the current WorldUtils config values
 tellraw @s [ \
     "", \
     {"text": "--- WorldUtils Info ---", "bold": true, "color": "gold"}, \

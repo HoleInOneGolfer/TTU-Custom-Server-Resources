@@ -1,10 +1,12 @@
-# Rmove old objectives
+# Reset old objectives so reload keeps state clean
 scoreboard objectives remove disc_menu
 scoreboard objectives remove disc_model
 
-# Load Starts here
+# Register trigger objectives
 scoreboard objectives add discmodel trigger
 scoreboard objectives add discmenu trigger
+
+# Enable triggers for all online players
 scoreboard players enable @a discmodel
 scoreboard players enable @a discmenu
 
