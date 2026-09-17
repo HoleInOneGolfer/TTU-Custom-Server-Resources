@@ -7,10 +7,10 @@ execute at @e[type=marker,tag=spawn_marker,limit=1] as @a run function worldutil
 
 # --- /trigger suicide ---
 execute as @a[scores={suicide=1..}] run kill @s
-scoreboard players reset @a[scores={suicide=1..}]
+scoreboard players reset @a[scores={suicide=1..}] suicide
 scoreboard players enable @a suicide
 
 # --- /trigger spawn ---
 execute as @a[scores={spawn=1..}] at @e[type=marker,tag=spawn_marker,limit=1] run tp @s ~0.5 ~ ~0.5
-scoreboard players reset @a[scores={spawn=1..}]
+scoreboard players reset @a[scores={spawn=1..}] spawn
 scoreboard players enable @a spawn
