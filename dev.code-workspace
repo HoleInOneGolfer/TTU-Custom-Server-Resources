@@ -1,0 +1,17 @@
+{
+    "folders": [
+        {
+            "path": "./datapack"
+        },
+        {
+            "path": "./resourcepack"
+        },
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        // ignore the folders that are paths sepcifcally so they aren't in the . vscode folder
+        "files.exclude": {}
+    }
+}
